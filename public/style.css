@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@500&display=swap');
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --vDarkCyan: hsl(179, 100%, 13%);
+  --tWhite: hsla(0, 0%, 100%, 0.75);
+  --vLightGray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 15px;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 38%;
+  border-radius: 15px;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem;
+  border-radius: 0.25rem;
+  height: 100%;
+}
+
+section:nth-child(1) {
+  background-color: var(--brightOrange);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+section:nth-child(2) {
+  background-color: var(--darkCyan);
+  border-radius: 0;
+}
+
+section:nth-child(3) {
+  background-color: var(--vDarkCyan);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media (max-width: 1439px) {
+  article {
+    flex-direction: column;
+    border-radius: 0.25rem;
+  }
+
+  article section {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  section:nth-child(1) {
+    border-radius: 0.25rem 0.25rem 0 0;
+    
+  }
+  
+  section:nth-child(3) {
+    border-radius: 0 0 0.25rem 0.25rem;
+  }
+
+}
+
+section h2 {
+  margin: 1.5rem 0;
+  font-family: 'Big Shoulders Display';
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--vLightGray);
+}
+
+section pre {
+  font-family: 'Lexend Deca';
+  font-size: 1rem;
+  color: var(--tWhite);
+  line-height: 1.75rem;
+}
+
+.fa-solid {
+  color: var(--tWhite);
+  padding: 0.5rem;
+  margin: 0 0 0 .25rem;
+  font-size: 1.25rem;
+  border-radius: 30px;
+  background-color: #00000044;
+}
+
+section button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Lexend Deca';
+  font-weight: 500;
+}
+
+section button:hover {
+  border: 2px solid var(--vLightGray);
+}
+
+section:nth-child(1) button {
+  color: var(--brightOrange);
+}
+
+section:nth-child(1) button:hover {
+  background-color: var(--brightOrange);
+  color: var(--tWhite);
+}
+
+section:nth-child(2) button {
+  color: var(--darkCyan);
+}
+
+section:nth-child(2) button:hover {
+  background-color: var(--darkCyan);
+  color: var(--tWhite);
+}
+
+section:nth-child(3) button {
+  color: var(--vDarkCyan);
+}
+
+section:nth-child(3) button:hover {
+  background-color: var(--vDarkCyan);
+  color: var(--tWhite);
+}
